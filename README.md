@@ -1,0 +1,2 @@
+# Sudoku
+Jatek beadandóra
