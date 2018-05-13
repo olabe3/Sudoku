@@ -6,44 +6,94 @@
 using namespace genv;
 using namespace std;
 
-Static_box::Static_box(int x, int y, int sx, int sy, string felirat, int aktiv, int rossz) : Widget(x,y,sx,sy)
+Static_box::Static_box(int x, int y, int sx, int sy, string felirat, int aktiv, int index) : Widget(x,y,sx,sy)
 {
 	_felirat = felirat;
 	_aktiv = aktiv;
-	_rossz = rossz;
-	_focused=false;
+	_index = index;
+	_focused = false;
 }
 
 void Static_box::draw()
 {
     if(_aktiv==0){
-        if(_rossz==0){
-             gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
-            gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
-            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 0, 0) << text(_felirat);
+        if(_index==0){
+            if(_felirat=="0"){
+                gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(100, 100, 100) << text(_felirat);
+            }
+            else{
+                gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 0, 0) << text(_felirat);
+            }
         }
-        else{
+        else if(_index==1){
+            if(_felirat=="0"){
+                gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(100, 100, 100) << text(_felirat);
+            }
+            else{
+                gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 255, 255) << text(_felirat);
+            }
+        }
+        else if(_index==2){
             gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
             gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
-            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 255, 255) << text(_felirat);
+            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(0, 255, 0) << text(_felirat);
         }
     }
     if(_aktiv==1){
-        gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
-        gout << move_to(_x+2, _y+2) << color(255, 255, 255) << box(_size_x-4, _size_y-4);
-        gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(0, 0, 0) << text(_felirat);
+        if(_index==0){
+            gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+            gout << move_to(_x+2, _y+2) << color(255, 255, 255) << box(_size_x-4, _size_y-4);
+            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 0, 0) << text(_felirat);
+        }
+        else if(_index==1){
+            gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+            gout << move_to(_x+2, _y+2) << color(255, 255, 255) << box(_size_x-4, _size_y-4);
+            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(0, 0, 0) << text(_felirat);
+        }
+        else if(_index==2){
+            gout << move_to(_x, _y) << color(95, 95, 95) << box(_size_x, _size_y);
+            gout << move_to(_x+2, _y+2) << color(255, 255, 255) << box(_size_x-4, _size_y-4);
+            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(0, 255, 0) << text(_felirat);
+        }
     }
 	if(_focused)
     {
-        if(_rossz==0){
-            gout << move_to(_x, _y) << color(255, 0, 0) << box(_size_x, _size_y);
-            gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
-            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 0, 0) << text(_felirat);
+        if(_index==0){
+            if(_felirat=="0"){
+                gout << move_to(_x, _y) << color(255, 0, 0) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(100, 100, 100) << text(_felirat);
+            }
+            else{
+                gout << move_to(_x, _y) << color(255, 0, 0) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 0, 0) << text(_felirat);
+            }
         }
-        else{
+        else if(_index==1){
+            if(_felirat=="0"){
+                gout << move_to(_x, _y) << color(255, 0, 0) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(100, 100, 100) << text(_felirat);
+            }
+            else{
+                gout << move_to(_x, _y) << color(255, 0, 0) << box(_size_x, _size_y);
+                gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
+                gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 255, 255) << text(_felirat);
+            }
+        }
+        else if(_index==2){
             gout << move_to(_x, _y) << color(255, 0, 0) << box(_size_x, _size_y);
             gout << move_to(_x+2, _y+2) << color(50, 50, 50) << box(_size_x-4, _size_y-4);
-            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(255, 255, 255) << text(_felirat);
+            gout << move_to(_x+_size_y/2-gout.twidth(_felirat), ((_y+_size_y/2))+gout.cascent()/2-gout.cdescent()/2+2) << color(0, 255, 0) << text(_felirat);
         }
     }
 
@@ -59,6 +109,7 @@ void Static_box::draw()
 
 void Static_box::handle(event ev)
 {
+
 }
 
 bool Static_box::is_selected(event ev)
@@ -67,7 +118,7 @@ bool Static_box::is_selected(event ev)
         if (ev.pos_x>_x && ev.pos_x<_x+_size_x && ev.pos_y>_y && ev.pos_y<_y+_size_y && ev.button==btn_left){
             _focused=true;
         }
-        if (!(ev.pos_x>_x && ev.pos_x<_x+_size_x && ev.pos_y>_y && ev.pos_y<_y+_size_y)&& ev.button==btn_left) {
+        if (!(ev.pos_x>_x && ev.pos_x<_x+_size_x && ev.pos_y>_y && ev.pos_y<_y+_size_y) && (ev.pos_x>20 && ev.pos_x<568 && ev.pos_y>20 && ev.pos_y < 568)&& ev.button==btn_left) {
             _focused=false;
         }
     }

@@ -17,6 +17,7 @@ public:
     std::vector<Widget*> w;
     std::vector<std::string> szamok;
     void event_loop();
+    int palya;
 };
 
 #endif // WINDOW_HPP

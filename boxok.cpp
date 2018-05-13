@@ -38,6 +38,7 @@ void Boxok::draw()
     gout << move_to(_x-_size_y/2+2, _y+_size_y/2+2) << color(0,0,0) << box(_size_y/2-4, _size_y/2-4);
     gout << color(255,255,255);
     gout << move_to(_x-_size_y/2+4, _y+3*(_size_y/4)) << line(_size_y/2-8, 0);
+    gout << move_to(760,20) << color(255,255,255) << text("Szabályok:\n\n Játékszabályok:\n\n 1, Minden kitöltött vízszintes SOR tartalmazza 1-tõl 9-ig mind a kilenc számjegyet,\n\n 2, Minden kitöltött függõleges SOR (vagy oszlop)\n is tartalmazza 1-tõl 9-ig mind a kilenc számjegyet,\n\n 3, Minden kitöltött háromszor hármas NÉGYZET\n is tartalmazza 1-tõl 9-ig mind a kilenc számjegyet úgy, hogy \n\n EGYETLEN SZÁM SEM ISMÉTLÕDHET ÉS EGYIK SEM HAGYHATÓ EL!\n\n Játék menete:\n\n 1, A kívánt számjegyet a számbeállító doboz segítségével állíthatja be:\n Értéket a + megnyomásával vagy a FEL billentyûvel növelhet.\n Értéket a - megynomásával vagy a LE billentyûvel csökkenthet.\n\n 2, A kiválasztott számjegyet a kívánt mezõbe bevinni az alábbi módon tudja megvalósítnai:\n A kívánt mezõt bal egérgombbal rákantintva tudja kiválasztani\n Értékdás a kíválaszotott mezõnek az ENTER feliratú doboz\n bal egérgombbal történõ megnyomásával lehetséges.\n\n 3, Amennyiben olyan számot adott meg egy mezõnek, ami a szabályokkal ellentétes,\n a mezõkben lévõ helytelen számok pirosan jelennek meg.\n Javítási lehetõség, ha a helytelen mezõbe ismételten 0-t ír.\n\n 4, Amennyiben minden számot helyesen írt be, Ön nyert!\n A helyesen kitöltött sudoku minden mezõje zölden jelenik meg!\n\n Kellemes idõtöltést kívánok!");
 }
 
 void Boxok::handle(event ev)
@@ -51,6 +52,5 @@ void Boxok::handle(event ev)
 }
 bool Boxok::is_selected(event ev)
 {
-
     return true;
 }

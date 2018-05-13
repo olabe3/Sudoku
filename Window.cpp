@@ -23,11 +23,6 @@ void Window::event_loop()
             }
             v->draw();
         }
-        for(int i=0; i < szamok.size(); i++){
-            if(ev.keycode==key_enter){
-                cout << "A " << i+1 << ". elem erteke:" <<szamok[i] << endl;
-            }
-        }
         gout << refresh;
     }
 }

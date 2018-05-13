@@ -6,6 +6,9 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <ctime>
+#include <cstdlib>
+
 using namespace genv;
 using namespace std;
 
@@ -105,254 +108,749 @@ public:
     Static_box *s81;
 
     My_Window(int X, int Y) : Window(X,Y) {
-        b1 = new Boxok(650,200,100,90,1,9);
-        set1 = new Set_button(this,660,300,90,90,"Enter");
-        s1 = new Static_box(20,20,60,60,"0",0,1);
-        s2 = new Static_box(80,20,60,60,"9",1,1);
-        s3 = new Static_box(140,20,60,60,"6",1,1);
-        s4 = new Static_box(204,20,60,60,"4",1,1);
-        s5 = new Static_box(264,20,60,60,"0",0,1);
-        s6 = new Static_box(324,20,60,60,"0",0,1);
-        s7 = new Static_box(388,20,60,60,"1",1,1);
-        s8 = new Static_box(448,20,60,60,"0",0,1);
-        s9 = new Static_box(508,20,60,60,"7",1,1);
-        s10 = new Static_box(20,80,60,60,"8",1,1);
-        s11 = new Static_box(80,80,60,60,"0",0,1);
-        s12 = new Static_box(140,80,60,60,"5",1,1);
-        s13 = new Static_box(204,80,60,60,"0",0,1);
-        s14 = new Static_box(264,80,60,60,"9",1,1);
-        s15 = new Static_box(324,80,60,60,"0",0,1);
-        s16 = new Static_box(388,80,60,60,"0",0,1);
-        s17 = new Static_box(448,80,60,60,"0",0,1);
-        s18 = new Static_box(508,80,60,60,"3",1,1);
-        s19 = new Static_box(20,140,60,60,"4",1,1);
-        s20 = new Static_box(80,140,60,60,"0",0,1);
-        s21 = new Static_box(140,140,60,60,"0",0,1);
-        s22 = new Static_box(204,140,60,60,"0",0,1);
-        s23 = new Static_box(264,140,60,60,"0",0,1);
-        s24 = new Static_box(324,140,60,60,"6",1,1);
-        s25 = new Static_box(388,140,60,60,"0",0,1);
-        s26 = new Static_box(448,140,60,60,"9",1,1);
-        s27 = new Static_box(508,140,60,60,"5",1,1);
-        s28 = new Static_box(20,204,60,60,"0",0,1);
-        s29 = new Static_box(80,204,60,60,"0",0,1);
-        s30 = new Static_box(140,204,60,60,"0",0,1);
-        s31 = new Static_box(204,204,60,60,"0",0,1);
-        s32 = new Static_box(264,204,60,60,"0",0,1);
-        s33 = new Static_box(324,204,60,60,"0",0,1);
-        s34 = new Static_box(388,204,60,60,"0",0,1);
-        s35 = new Static_box(448,204,60,60,"0",0,1);
-        s36 = new Static_box(508,204,60,60,"8",1,1);
-        s37 = new Static_box(20,264,60,60,"2",1,1);
-        s38 = new Static_box(80,264,60,60,"7",1,1);
-        s39 = new Static_box(140,264,60,60,"8",1,1);
-        s40 = new Static_box(204,264,60,60,"0",0,1);
-        s41 = new Static_box(264,264,60,60,"0",0,1);
-        s42 = new Static_box(324,264,60,60,"0",0,1);
-        s43 = new Static_box(388,264,60,60,"6",1,1);
-        s44 = new Static_box(448,264,60,60,"4",1,1);
-        s45 = new Static_box(508,264,60,60,"0",0,1);
-        s46 = new Static_box(20,324,60,60,"0",0,1);
-        s47 = new Static_box(80,324,60,60,"5",1,1);
-        s48 = new Static_box(140,324,60,60,"4",1,1);
-        s49 = new Static_box(204,324,60,60,"6",1,1);
-        s50 = new Static_box(264,324,60,60,"0",0,1);
-        s51 = new Static_box(324,324,60,60,"0",0,1);
-        s52 = new Static_box(388,324,60,60,"3",1,1);
-        s53 = new Static_box(448,324,60,60,"1",1,1);
-        s54 = new Static_box(508,324,60,60,"0",0,1);
-        s55 = new Static_box(20,388,60,60,"5",1,1);
-        s56 = new Static_box(80,388,60,60,"0",0,1);
-        s57 = new Static_box(140,388,60,60,"9",1,1);
-        s58 = new Static_box(204,388,60,60,"3",1,1);
-        s59 = new Static_box(264,388,60,60,"0",0,1);
-        s60 = new Static_box(324,388,60,60,"0",0,1);
-        s61 = new Static_box(388,388,60,60,"0",0,1);
-        s62 = new Static_box(448,388,60,60,"0",0,1);
-        s63 = new Static_box(508,388,60,60,"0",0,1);
-        s64 = new Static_box(20,448,60,60,"0",0,1);
-        s65 = new Static_box(80,448,60,60,"0",0,1);
-        s66 = new Static_box(140,448,60,60,"0",0,1);
-        s67 = new Static_box(204,448,60,60,"9",1,1);
-        s68 = new Static_box(264,448,60,60,"0",0,1);
-        s69 = new Static_box(324,448,60,60,"4",1,1);
-        s70 = new Static_box(388,448,60,60,"0",0,1);
-        s71 = new Static_box(448,448,60,60,"0",0,1);
-        s72 = new Static_box(508,448,60,60,"1",1,1);
-        s73 = new Static_box(20,508,60,60,"0",0,1);
-        s74 = new Static_box(80,508,60,60,"3",1,1);
-        s75 = new Static_box(140,508,60,60,"0",0,1);
-        s76 = new Static_box(204,508,60,60,"5",1,1);
-        s77 = new Static_box(264,508,60,60,"7",1,1);
-        s78 = new Static_box(324,508,60,60,"8",1,1);
-        s79 = new Static_box(388,508,60,60,"9",1,1);
-        s80 = new Static_box(448,508,60,60,"2",1,1);
-        s81 = new Static_box(508,508,60,60,"0",0,1);
-
+        b1 = new Boxok(650,254,100,90,0,9);
+        set1 = new Set_button(this,650,354,90,90,"Enter");
         w.push_back(b1);
         w.push_back(set1);
-        w.push_back(s1);
-        szamok.push_back("0");
-        w.push_back(s2);
-        szamok.push_back("9");
-        w.push_back(s3);
-        szamok.push_back("6");
-        w.push_back(s4);
-        szamok.push_back("4");
-        w.push_back(s5);
-        szamok.push_back("0");
-        w.push_back(s6);
-        szamok.push_back("0");
-        w.push_back(s7);
-        szamok.push_back("1");
-        w.push_back(s8);
-        szamok.push_back("0");
-        w.push_back(s9);
-        szamok.push_back("7");
-        w.push_back(s10);
-        szamok.push_back("8");
-        w.push_back(s11);
-        szamok.push_back("0");
-        w.push_back(s12);
-        szamok.push_back("5");
-        w.push_back(s13);
-        szamok.push_back("0");
-        w.push_back(s14);
-        szamok.push_back("9");
-        w.push_back(s15);
-        szamok.push_back("0");
-        w.push_back(s16);
-        szamok.push_back("0");
-        w.push_back(s17);
-        szamok.push_back("0");
-        w.push_back(s18);
-        szamok.push_back("3");
-        w.push_back(s19);
-        szamok.push_back("4");
-        w.push_back(s20);
-        szamok.push_back("0");
-        w.push_back(s21);
-        szamok.push_back("0");
-        w.push_back(s22);
-        szamok.push_back("0");
-        w.push_back(s23);
-        szamok.push_back("0");
-        w.push_back(s24);
-        szamok.push_back("6");
-        w.push_back(s25);
-        szamok.push_back("0");
-        w.push_back(s26);
-        szamok.push_back("9");
-        w.push_back(s27);
-        szamok.push_back("5");
-        w.push_back(s28);
-        szamok.push_back("0");
-        w.push_back(s29);
-        szamok.push_back("0");
-        w.push_back(s30);
-        szamok.push_back("0");
-        w.push_back(s31);
-        szamok.push_back("0");
-        w.push_back(s32);
-        szamok.push_back("0");
-        w.push_back(s33);
-        szamok.push_back("0");
-        w.push_back(s34);
-        szamok.push_back("0");
-        w.push_back(s35);
-        szamok.push_back("0");
-        w.push_back(s36);
-        szamok.push_back("8");
-        w.push_back(s37);
-        szamok.push_back("2");
-        w.push_back(s38);
-        szamok.push_back("7");
-        w.push_back(s39);
-        szamok.push_back("8");
-        w.push_back(s40);
-        szamok.push_back("0");
-        w.push_back(s41);
-        szamok.push_back("0");
-        w.push_back(s42);
-        szamok.push_back("0");
-        w.push_back(s43);
-        szamok.push_back("6");
-        w.push_back(s44);
-        szamok.push_back("4");
-        w.push_back(s45);
-        szamok.push_back("0");
-        w.push_back(s46);
-        szamok.push_back("0");
-        w.push_back(s47);
-        szamok.push_back("5");
-        w.push_back(s48);
-        szamok.push_back("4");
-        w.push_back(s49);
-        szamok.push_back("6");
-        w.push_back(s50);
-        szamok.push_back("0");
-        w.push_back(s51);
-        szamok.push_back("0");
-        w.push_back(s52);
-        szamok.push_back("3");
-        w.push_back(s53);
-        szamok.push_back("1");
-        w.push_back(s54);
-        szamok.push_back("0");
-        w.push_back(s55);
-        szamok.push_back("5");
-        w.push_back(s56);
-        szamok.push_back("0");
-        w.push_back(s57);
-        szamok.push_back("9");
-        w.push_back(s58);
-        szamok.push_back("3");
-        w.push_back(s59);
-        szamok.push_back("0");
-        w.push_back(s60);
-        szamok.push_back("0");
-        w.push_back(s61);
-        szamok.push_back("0");
-        w.push_back(s62);
-        szamok.push_back("0");
-        w.push_back(s63);
-        szamok.push_back("0");
-        w.push_back(s64);
-        szamok.push_back("0");
-        w.push_back(s65);
-        szamok.push_back("0");
-        w.push_back(s66);
-        szamok.push_back("0");
-        w.push_back(s67);
-        szamok.push_back("9");
-        w.push_back(s68);
-        szamok.push_back("0");
-        w.push_back(s69);
-        szamok.push_back("4");
-        w.push_back(s70);
-        szamok.push_back("0");
-        w.push_back(s71);
-        szamok.push_back("0");
-        w.push_back(s72);
-        szamok.push_back("1");
-        w.push_back(s73);
-        szamok.push_back("0");
-        w.push_back(s74);
-        szamok.push_back("3");
-        w.push_back(s75);
-        szamok.push_back("0");
-        w.push_back(s76);
-        szamok.push_back("5");
-        w.push_back(s77);
-        szamok.push_back("7");
-        w.push_back(s78);
-        szamok.push_back("8");
-        w.push_back(s79);
-        szamok.push_back("9");
-        w.push_back(s80);
-        szamok.push_back("2");
-        w.push_back(s81);
-        szamok.push_back("0");
+        srand(time(nullptr));
+        palya=rand()%3;
+        if(palya==0){
+            s1 = new Static_box(20,20,60,60,"0",0,1);
+            s2 = new Static_box(80,20,60,60,"9",1,1);
+            s3 = new Static_box(140,20,60,60,"6",1,1);
+            s4 = new Static_box(204,20,60,60,"4",1,1);
+            s5 = new Static_box(264,20,60,60,"0",0,1);
+            s6 = new Static_box(324,20,60,60,"0",0,1);
+            s7 = new Static_box(388,20,60,60,"1",1,1);
+            s8 = new Static_box(448,20,60,60,"0",0,1);
+            s9 = new Static_box(508,20,60,60,"7",1,1);
+            s10 = new Static_box(20,80,60,60,"8",1,1);
+            s11 = new Static_box(80,80,60,60,"0",0,1);
+            s12 = new Static_box(140,80,60,60,"5",1,1);
+            s13 = new Static_box(204,80,60,60,"0",0,1);
+            s14 = new Static_box(264,80,60,60,"9",1,1);
+            s15 = new Static_box(324,80,60,60,"0",0,1);
+            s16 = new Static_box(388,80,60,60,"0",0,1);
+            s17 = new Static_box(448,80,60,60,"0",0,1);
+            s18 = new Static_box(508,80,60,60,"3",1,1);
+            s19 = new Static_box(20,140,60,60,"4",1,1);
+            s20 = new Static_box(80,140,60,60,"0",0,1);
+            s21 = new Static_box(140,140,60,60,"0",0,1);
+            s22 = new Static_box(204,140,60,60,"0",0,1);
+            s23 = new Static_box(264,140,60,60,"0",0,1);
+            s24 = new Static_box(324,140,60,60,"6",1,1);
+            s25 = new Static_box(388,140,60,60,"0",0,1);
+            s26 = new Static_box(448,140,60,60,"9",1,1);
+            s27 = new Static_box(508,140,60,60,"5",1,1);
+            s28 = new Static_box(20,204,60,60,"0",0,1);
+            s29 = new Static_box(80,204,60,60,"0",0,1);
+            s30 = new Static_box(140,204,60,60,"0",0,1);
+            s31 = new Static_box(204,204,60,60,"0",0,1);
+            s32 = new Static_box(264,204,60,60,"0",0,1);
+            s33 = new Static_box(324,204,60,60,"0",0,1);
+            s34 = new Static_box(388,204,60,60,"0",0,1);
+            s35 = new Static_box(448,204,60,60,"0",0,1);
+            s36 = new Static_box(508,204,60,60,"8",1,1);
+            s37 = new Static_box(20,264,60,60,"2",1,1);
+            s38 = new Static_box(80,264,60,60,"7",1,1);
+            s39 = new Static_box(140,264,60,60,"8",1,1);
+            s40 = new Static_box(204,264,60,60,"0",0,1);
+            s41 = new Static_box(264,264,60,60,"0",0,1);
+            s42 = new Static_box(324,264,60,60,"0",0,1);
+            s43 = new Static_box(388,264,60,60,"6",1,1);
+            s44 = new Static_box(448,264,60,60,"4",1,1);
+            s45 = new Static_box(508,264,60,60,"0",0,1);
+            s46 = new Static_box(20,324,60,60,"0",0,1);
+            s47 = new Static_box(80,324,60,60,"5",1,1);
+            s48 = new Static_box(140,324,60,60,"4",1,1);
+            s49 = new Static_box(204,324,60,60,"6",1,1);
+            s50 = new Static_box(264,324,60,60,"0",0,1);
+            s51 = new Static_box(324,324,60,60,"0",0,1);
+            s52 = new Static_box(388,324,60,60,"3",1,1);
+            s53 = new Static_box(448,324,60,60,"1",1,1);
+            s54 = new Static_box(508,324,60,60,"0",0,1);
+            s55 = new Static_box(20,388,60,60,"5",1,1);
+            s56 = new Static_box(80,388,60,60,"0",0,1);
+            s57 = new Static_box(140,388,60,60,"9",1,1);
+            s58 = new Static_box(204,388,60,60,"3",1,1);
+            s59 = new Static_box(264,388,60,60,"0",0,1);
+            s60 = new Static_box(324,388,60,60,"0",0,1);
+            s61 = new Static_box(388,388,60,60,"0",0,1);
+            s62 = new Static_box(448,388,60,60,"0",0,1);
+            s63 = new Static_box(508,388,60,60,"0",0,1);
+            s64 = new Static_box(20,448,60,60,"0",0,1);
+            s65 = new Static_box(80,448,60,60,"0",0,1);
+            s66 = new Static_box(140,448,60,60,"0",0,1);
+            s67 = new Static_box(204,448,60,60,"9",1,1);
+            s68 = new Static_box(264,448,60,60,"0",0,1);
+            s69 = new Static_box(324,448,60,60,"4",1,1);
+            s70 = new Static_box(388,448,60,60,"0",0,1);
+            s71 = new Static_box(448,448,60,60,"0",0,1);
+            s72 = new Static_box(508,448,60,60,"1",1,1);
+            s73 = new Static_box(20,508,60,60,"0",0,1);
+            s74 = new Static_box(80,508,60,60,"3",1,1);
+            s75 = new Static_box(140,508,60,60,"0",0,1);
+            s76 = new Static_box(204,508,60,60,"5",1,1);
+            s77 = new Static_box(264,508,60,60,"7",1,1);
+            s78 = new Static_box(324,508,60,60,"8",1,1);
+            s79 = new Static_box(388,508,60,60,"9",1,1);
+            s80 = new Static_box(448,508,60,60,"2",1,1);
+            s81 = new Static_box(508,508,60,60,"0",0,1);
+            w.push_back(s1);
+            szamok.push_back("0");
+            w.push_back(s2);
+            szamok.push_back("9");
+            w.push_back(s3);
+            szamok.push_back("6");
+            w.push_back(s4);
+            szamok.push_back("4");
+            w.push_back(s5);
+            szamok.push_back("0");
+            w.push_back(s6);
+            szamok.push_back("0");
+            w.push_back(s7);
+            szamok.push_back("1");
+            w.push_back(s8);
+            szamok.push_back("0");
+            w.push_back(s9);
+            szamok.push_back("7");
+            w.push_back(s10);
+            szamok.push_back("8");
+            w.push_back(s11);
+            szamok.push_back("0");
+            w.push_back(s12);
+            szamok.push_back("5");
+            w.push_back(s13);
+            szamok.push_back("0");
+            w.push_back(s14);
+            szamok.push_back("9");
+            w.push_back(s15);
+            szamok.push_back("0");
+            w.push_back(s16);
+            szamok.push_back("0");
+            w.push_back(s17);
+            szamok.push_back("0");
+            w.push_back(s18);
+            szamok.push_back("3");
+            w.push_back(s19);
+            szamok.push_back("4");
+            w.push_back(s20);
+            szamok.push_back("0");
+            w.push_back(s21);
+            szamok.push_back("0");
+            w.push_back(s22);
+            szamok.push_back("0");
+            w.push_back(s23);
+            szamok.push_back("0");
+            w.push_back(s24);
+            szamok.push_back("6");
+            w.push_back(s25);
+            szamok.push_back("0");
+            w.push_back(s26);
+            szamok.push_back("9");
+            w.push_back(s27);
+            szamok.push_back("5");
+            w.push_back(s28);
+            szamok.push_back("0");
+            w.push_back(s29);
+            szamok.push_back("0");
+            w.push_back(s30);
+            szamok.push_back("0");
+            w.push_back(s31);
+            szamok.push_back("0");
+            w.push_back(s32);
+            szamok.push_back("0");
+            w.push_back(s33);
+            szamok.push_back("0");
+            w.push_back(s34);
+            szamok.push_back("0");
+            w.push_back(s35);
+            szamok.push_back("0");
+            w.push_back(s36);
+            szamok.push_back("8");
+            w.push_back(s37);
+            szamok.push_back("2");
+            w.push_back(s38);
+            szamok.push_back("7");
+            w.push_back(s39);
+            szamok.push_back("8");
+            w.push_back(s40);
+            szamok.push_back("0");
+            w.push_back(s41);
+            szamok.push_back("0");
+            w.push_back(s42);
+            szamok.push_back("0");
+            w.push_back(s43);
+            szamok.push_back("6");
+            w.push_back(s44);
+            szamok.push_back("4");
+            w.push_back(s45);
+            szamok.push_back("0");
+            w.push_back(s46);
+            szamok.push_back("0");
+            w.push_back(s47);
+            szamok.push_back("5");
+            w.push_back(s48);
+            szamok.push_back("4");
+            w.push_back(s49);
+            szamok.push_back("6");
+            w.push_back(s50);
+            szamok.push_back("0");
+            w.push_back(s51);
+            szamok.push_back("0");
+            w.push_back(s52);
+            szamok.push_back("3");
+            w.push_back(s53);
+            szamok.push_back("1");
+            w.push_back(s54);
+            szamok.push_back("0");
+            w.push_back(s55);
+            szamok.push_back("5");
+            w.push_back(s56);
+            szamok.push_back("0");
+            w.push_back(s57);
+            szamok.push_back("9");
+            w.push_back(s58);
+            szamok.push_back("3");
+            w.push_back(s59);
+            szamok.push_back("0");
+            w.push_back(s60);
+            szamok.push_back("0");
+            w.push_back(s61);
+            szamok.push_back("0");
+            w.push_back(s62);
+            szamok.push_back("0");
+            w.push_back(s63);
+            szamok.push_back("0");
+            w.push_back(s64);
+            szamok.push_back("0");
+            w.push_back(s65);
+            szamok.push_back("0");
+            w.push_back(s66);
+            szamok.push_back("0");
+            w.push_back(s67);
+            szamok.push_back("9");
+            w.push_back(s68);
+            szamok.push_back("0");
+            w.push_back(s69);
+            szamok.push_back("4");
+            w.push_back(s70);
+            szamok.push_back("0");
+            w.push_back(s71);
+            szamok.push_back("0");
+            w.push_back(s72);
+            szamok.push_back("1");
+            w.push_back(s73);
+            szamok.push_back("0");
+            w.push_back(s74);
+            szamok.push_back("3");
+            w.push_back(s75);
+            szamok.push_back("0");
+            w.push_back(s76);
+            szamok.push_back("5");
+            w.push_back(s77);
+            szamok.push_back("7");
+            w.push_back(s78);
+            szamok.push_back("8");
+            w.push_back(s79);
+            szamok.push_back("9");
+            w.push_back(s80);
+            szamok.push_back("2");
+            w.push_back(s81);
+            szamok.push_back("0");
+        }
+
+        if(palya==1){
+            s1 = new Static_box(20,20,60,60,"6",1,1);
+            s2 = new Static_box(80,20,60,60,"0",0,1);
+            s3 = new Static_box(140,20,60,60,"0",0,1);
+            s4 = new Static_box(204,20,60,60,"8",1,1);
+            s5 = new Static_box(264,20,60,60,"0",0,1);
+            s6 = new Static_box(324,20,60,60,"7",1,1);
+            s7 = new Static_box(388,20,60,60,"0",0,1);
+            s8 = new Static_box(448,20,60,60,"3",1,1);
+            s9 = new Static_box(508,20,60,60,"0",0,1);
+            s10 = new Static_box(20,80,60,60,"4",1,1);
+            s11 = new Static_box(80,80,60,60,"0",0,1);
+            s12 = new Static_box(140,80,60,60,"0",0,1);
+            s13 = new Static_box(204,80,60,60,"0",0,1);
+            s14 = new Static_box(264,80,60,60,"3",1,1);
+            s15 = new Static_box(324,80,60,60,"2",1,1);
+            s16 = new Static_box(388,80,60,60,"9",1,1);
+            s17 = new Static_box(448,80,60,60,"5",1,1);
+            s18 = new Static_box(508,80,60,60,"0",0,1);
+            s19 = new Static_box(20,140,60,60,"3",1,1);
+            s20 = new Static_box(80,140,60,60,"8",1,1);
+            s21 = new Static_box(140,140,60,60,"0",0,1);
+            s22 = new Static_box(204,140,60,60,"4",1,1);
+            s23 = new Static_box(264,140,60,60,"0",0,1);
+            s24 = new Static_box(324,140,60,60,"0",0,1);
+            s25 = new Static_box(388,140,60,60,"1",1,1);
+            s26 = new Static_box(448,140,60,60,"0",0,1);
+            s27 = new Static_box(508,140,60,60,"6",1,1);
+            s28 = new Static_box(20,204,60,60,"0",0,1);
+            s29 = new Static_box(80,204,60,60,"1",1,1);
+            s30 = new Static_box(140,204,60,60,"0",0,1);
+            s31 = new Static_box(204,204,60,60,"0",0,1);
+            s32 = new Static_box(264,204,60,60,"2",1,1);
+            s33 = new Static_box(324,204,60,60,"4",1,1);
+            s34 = new Static_box(388,204,60,60,"8",1,1);
+            s35 = new Static_box(448,204,60,60,"0",0,1);
+            s36 = new Static_box(508,204,60,60,"0",0,1);
+            s37 = new Static_box(20,264,60,60,"0",0,1);
+            s38 = new Static_box(80,264,60,60,"0",0,1);
+            s39 = new Static_box(140,264,60,60,"3",1,1);
+            s40 = new Static_box(204,264,60,60,"0",0,1);
+            s41 = new Static_box(264,264,60,60,"7",1,1);
+            s42 = new Static_box(324,264,60,60,"6",1,1);
+            s43 = new Static_box(388,264,60,60,"0",0,1);
+            s44 = new Static_box(448,264,60,60,"4",1,1);
+            s45 = new Static_box(508,264,60,60,"0",0,1);
+            s46 = new Static_box(20,324,60,60,"0",0,1);
+            s47 = new Static_box(80,324,60,60,"4",1,1);
+            s48 = new Static_box(140,324,60,60,"0",0,1);
+            s49 = new Static_box(204,324,60,60,"5",1,1);
+            s50 = new Static_box(264,324,60,60,"0",0,1);
+            s51 = new Static_box(324,324,60,60,"0",0,1);
+            s52 = new Static_box(388,324,60,60,"0",0,1);
+            s53 = new Static_box(448,324,60,60,"2",1,1);
+            s54 = new Static_box(508,324,60,60,"3",1,1);
+            s55 = new Static_box(20,388,60,60,"0",0,1);
+            s56 = new Static_box(80,388,60,60,"0",0,1);
+            s57 = new Static_box(140,388,60,60,"7",1,1);
+            s58 = new Static_box(204,388,60,60,"0",0,1);
+            s59 = new Static_box(264,388,60,60,"0",0,1);
+            s60 = new Static_box(324,388,60,60,"9",1,1);
+            s61 = new Static_box(388,388,60,60,"3",1,1);
+            s62 = new Static_box(448,388,60,60,"0",0,1);
+            s63 = new Static_box(508,388,60,60,"5",1,1);
+            s64 = new Static_box(20,448,60,60,"0",0,1);
+            s65 = new Static_box(80,448,60,60,"3",1,1);
+            s66 = new Static_box(140,448,60,60,"0",0,1);
+            s67 = new Static_box(204,448,60,60,"2",1,1);
+            s68 = new Static_box(264,448,60,60,"0",0,1);
+            s69 = new Static_box(324,448,60,60,"0",0,1);
+            s70 = new Static_box(388,448,60,60,"0",0,1);
+            s71 = new Static_box(448,448,60,60,"0",0,1);
+            s72 = new Static_box(508,448,60,60,"0",0,1);
+            s73 = new Static_box(20,508,60,60,"9",1,1);
+            s74 = new Static_box(80,508,60,60,"0",0,1);
+            s75 = new Static_box(140,508,60,60,"8",1,1);
+            s76 = new Static_box(204,508,60,60,"0",0,1);
+            s77 = new Static_box(264,508,60,60,"6",1,1);
+            s78 = new Static_box(324,508,60,60,"0",0,1);
+            s79 = new Static_box(388,508,60,60,"2",1,1);
+            s80 = new Static_box(448,508,60,60,"0",0,1);
+            s81 = new Static_box(508,508,60,60,"0",0,1);
+            w.push_back(s1);
+            szamok.push_back("6");
+            w.push_back(s2);
+            szamok.push_back("0");
+            w.push_back(s3);
+            szamok.push_back("0");
+            w.push_back(s4);
+            szamok.push_back("8");
+            w.push_back(s5);
+            szamok.push_back("0");
+            w.push_back(s6);
+            szamok.push_back("7");
+            w.push_back(s7);
+            szamok.push_back("0");
+            w.push_back(s8);
+            szamok.push_back("3");
+            w.push_back(s9);
+            szamok.push_back("0");
+            w.push_back(s10);
+            szamok.push_back("4");
+            w.push_back(s11);
+            szamok.push_back("0");
+            w.push_back(s12);
+            szamok.push_back("0");
+            w.push_back(s13);
+            szamok.push_back("0");
+            w.push_back(s14);
+            szamok.push_back("3");
+            w.push_back(s15);
+            szamok.push_back("2");
+            w.push_back(s16);
+            szamok.push_back("9");
+            w.push_back(s17);
+            szamok.push_back("5");
+            w.push_back(s18);
+            szamok.push_back("0");
+            w.push_back(s19);
+            szamok.push_back("3");
+            w.push_back(s20);
+            szamok.push_back("8");
+            w.push_back(s21);
+            szamok.push_back("0");
+            w.push_back(s22);
+            szamok.push_back("4");
+            w.push_back(s23);
+            szamok.push_back("0");
+            w.push_back(s24);
+            szamok.push_back("0");
+            w.push_back(s25);
+            szamok.push_back("1");
+            w.push_back(s26);
+            szamok.push_back("0");
+            w.push_back(s27);
+            szamok.push_back("6");
+            w.push_back(s28);
+            szamok.push_back("0");
+            w.push_back(s29);
+            szamok.push_back("1");
+            w.push_back(s30);
+            szamok.push_back("0");
+            w.push_back(s31);
+            szamok.push_back("0");
+            w.push_back(s32);
+            szamok.push_back("2");
+            w.push_back(s33);
+            szamok.push_back("4");
+            w.push_back(s34);
+            szamok.push_back("8");
+            w.push_back(s35);
+            szamok.push_back("0");
+            w.push_back(s36);
+            szamok.push_back("0");
+            w.push_back(s37);
+            szamok.push_back("0");
+            w.push_back(s38);
+            szamok.push_back("0");
+            w.push_back(s39);
+            szamok.push_back("3");
+            w.push_back(s40);
+            szamok.push_back("0");
+            w.push_back(s41);
+            szamok.push_back("7");
+            w.push_back(s42);
+            szamok.push_back("6");
+            w.push_back(s43);
+            szamok.push_back("0");
+            w.push_back(s44);
+            szamok.push_back("4");
+            w.push_back(s45);
+            szamok.push_back("0");
+            w.push_back(s46);
+            szamok.push_back("0");
+            w.push_back(s47);
+            szamok.push_back("4");
+            w.push_back(s48);
+            szamok.push_back("0");
+            w.push_back(s49);
+            szamok.push_back("5");
+            w.push_back(s50);
+            szamok.push_back("0");
+            w.push_back(s51);
+            szamok.push_back("0");
+            w.push_back(s52);
+            szamok.push_back("0");
+            w.push_back(s53);
+            szamok.push_back("2");
+            w.push_back(s54);
+            szamok.push_back("3");
+            w.push_back(s55);
+            szamok.push_back("0");
+            w.push_back(s56);
+            szamok.push_back("0");
+            w.push_back(s57);
+            szamok.push_back("7");
+            w.push_back(s58);
+            szamok.push_back("0");
+            w.push_back(s59);
+            szamok.push_back("0");
+            w.push_back(s60);
+            szamok.push_back("9");
+            w.push_back(s61);
+            szamok.push_back("3");
+            w.push_back(s62);
+            szamok.push_back("0");
+            w.push_back(s63);
+            szamok.push_back("5");
+            w.push_back(s64);
+            szamok.push_back("0");
+            w.push_back(s65);
+            szamok.push_back("3");
+            w.push_back(s66);
+            szamok.push_back("0");
+            w.push_back(s67);
+            szamok.push_back("2");
+            w.push_back(s68);
+            szamok.push_back("0");
+            w.push_back(s69);
+            szamok.push_back("0");
+            w.push_back(s70);
+            szamok.push_back("0");
+            w.push_back(s71);
+            szamok.push_back("0");
+            w.push_back(s72);
+            szamok.push_back("0");
+            w.push_back(s73);
+            szamok.push_back("9");
+            w.push_back(s74);
+            szamok.push_back("0");
+            w.push_back(s75);
+            szamok.push_back("8");
+            w.push_back(s76);
+            szamok.push_back("0");
+            w.push_back(s77);
+            szamok.push_back("6");
+            w.push_back(s78);
+            szamok.push_back("0");
+            w.push_back(s79);
+            szamok.push_back("2");
+            w.push_back(s80);
+            szamok.push_back("0");
+            w.push_back(s81);
+            szamok.push_back("0");
+        }
+
+        if(palya==2){
+            s1 = new Static_box(20,20,60,60,"7",1,1);
+            s2 = new Static_box(80,20,60,60,"9",1,1);
+            s3 = new Static_box(140,20,60,60,"0",0,1);
+            s4 = new Static_box(204,20,60,60,"0",0,1);
+            s5 = new Static_box(264,20,60,60,"0",0,1);
+            s6 = new Static_box(324,20,60,60,"4",1,1);
+            s7 = new Static_box(388,20,60,60,"0",0,1);
+            s8 = new Static_box(448,20,60,60,"6",1,1);
+            s9 = new Static_box(508,20,60,60,"0",0,1);
+            s10 = new Static_box(20,80,60,60,"0",0,1);
+            s11 = new Static_box(80,80,60,60,"6",1,1);
+            s12 = new Static_box(140,80,60,60,"1",1,1);
+            s13 = new Static_box(204,80,60,60,"0",0,1);
+            s14 = new Static_box(264,80,60,60,"9",1,1);
+            s15 = new Static_box(324,80,60,60,"0",0,1);
+            s16 = new Static_box(388,80,60,60,"0",0,1);
+            s17 = new Static_box(448,80,60,60,"0",0,1);
+            s18 = new Static_box(508,80,60,60,"8",1,1);
+            s19 = new Static_box(20,140,60,60,"3",1,1);
+            s20 = new Static_box(80,140,60,60,"8",1,1);
+            s21 = new Static_box(140,140,60,60,"0",0,1);
+            s22 = new Static_box(204,140,60,60,"0",0,1);
+            s23 = new Static_box(264,140,60,60,"5",1,1);
+            s24 = new Static_box(324,140,60,60,"1",1,1);
+            s25 = new Static_box(388,140,60,60,"0",0,1);
+            s26 = new Static_box(448,140,60,60,"2",1,1);
+            s27 = new Static_box(508,140,60,60,"0",0,1);
+            s28 = new Static_box(20,204,60,60,"0",0,1);
+            s29 = new Static_box(80,204,60,60,"0",0,1);
+            s30 = new Static_box(140,204,60,60,"0",0,1);
+            s31 = new Static_box(204,204,60,60,"4",1,1);
+            s32 = new Static_box(264,204,60,60,"1",1,1);
+            s33 = new Static_box(324,204,60,60,"0",0,1);
+            s34 = new Static_box(388,204,60,60,"0",0,1);
+            s35 = new Static_box(448,204,60,60,"0",0,1);
+            s36 = new Static_box(508,204,60,60,"3",1,1);
+            s37 = new Static_box(20,264,60,60,"4",1,1);
+            s38 = new Static_box(80,264,60,60,"0",0,1);
+            s39 = new Static_box(140,264,60,60,"0",0,1);
+            s40 = new Static_box(204,264,60,60,"5",1,1);
+            s41 = new Static_box(264,264,60,60,"0",0,1);
+            s42 = new Static_box(324,264,60,60,"6",1,1);
+            s43 = new Static_box(388,264,60,60,"0",0,1);
+            s44 = new Static_box(448,264,60,60,"9",1,1);
+            s45 = new Static_box(508,264,60,60,"0",0,1);
+            s46 = new Static_box(20,324,60,60,"1",1,1);
+            s47 = new Static_box(80,324,60,60,"2",1,1);
+            s48 = new Static_box(140,324,60,60,"0",0,1);
+            s49 = new Static_box(204,324,60,60,"0",0,1);
+            s50 = new Static_box(264,324,60,60,"8",1,1);
+            s51 = new Static_box(324,324,60,60,"0",0,1);
+            s52 = new Static_box(388,324,60,60,"6",1,1);
+            s53 = new Static_box(448,324,60,60,"0",0,1);
+            s54 = new Static_box(508,324,60,60,"4",1,1);
+            s55 = new Static_box(20,388,60,60,"0",0,1);
+            s56 = new Static_box(80,388,60,60,"4",1,1);
+            s57 = new Static_box(140,388,60,60,"0",0,1);
+            s58 = new Static_box(204,388,60,60,"0",0,1);
+            s59 = new Static_box(264,388,60,60,"0",0,1);
+            s60 = new Static_box(324,388,60,60,"8",1,1);
+            s61 = new Static_box(388,388,60,60,"5",1,1);
+            s62 = new Static_box(448,388,60,60,"1",1,1);
+            s63 = new Static_box(508,388,60,60,"6",1,1);
+            s64 = new Static_box(20,448,60,60,"0",0,1);
+            s65 = new Static_box(80,448,60,60,"1",1,1);
+            s66 = new Static_box(140,448,60,60,"3",1,1);
+            s67 = new Static_box(204,448,60,60,"0",0,1);
+            s68 = new Static_box(264,448,60,60,"6",1,1);
+            s69 = new Static_box(324,448,60,60,"0",0,1);
+            s70 = new Static_box(388,448,60,60,"0",0,1);
+            s71 = new Static_box(448,448,60,60,"0",0,1);
+            s72 = new Static_box(508,448,60,60,"9",1,1);
+            s73 = new Static_box(20,508,60,60,"0",0,1);
+            s74 = new Static_box(80,508,60,60,"0",0,1);
+            s75 = new Static_box(140,508,60,60,"6",1,1);
+            s76 = new Static_box(204,508,60,60,"0",0,1);
+            s77 = new Static_box(264,508,60,60,"0",0,1);
+            s78 = new Static_box(324,508,60,60,"9",1,1);
+            s79 = new Static_box(388,508,60,60,"7",1,1);
+            s80 = new Static_box(448,508,60,60,"0",0,1);
+            s81 = new Static_box(508,508,60,60,"0",0,1);
+            w.push_back(s1);
+            szamok.push_back("7");
+            w.push_back(s2);
+            szamok.push_back("9");
+            w.push_back(s3);
+            szamok.push_back("0");
+            w.push_back(s4);
+            szamok.push_back("0");
+            w.push_back(s5);
+            szamok.push_back("0");
+            w.push_back(s6);
+            szamok.push_back("4");
+            w.push_back(s7);
+            szamok.push_back("0");
+            w.push_back(s8);
+            szamok.push_back("6");
+            w.push_back(s9);
+            szamok.push_back("0");
+            w.push_back(s10);
+            szamok.push_back("0");
+            w.push_back(s11);
+            szamok.push_back("6");
+            w.push_back(s12);
+            szamok.push_back("1");
+            w.push_back(s13);
+            szamok.push_back("0");
+            w.push_back(s14);
+            szamok.push_back("9");
+            w.push_back(s15);
+            szamok.push_back("0");
+            w.push_back(s16);
+            szamok.push_back("0");
+            w.push_back(s17);
+            szamok.push_back("0");
+            w.push_back(s18);
+            szamok.push_back("8");
+            w.push_back(s19);
+            szamok.push_back("3");
+            w.push_back(s20);
+            szamok.push_back("8");
+            w.push_back(s21);
+            szamok.push_back("0");
+            w.push_back(s22);
+            szamok.push_back("0");
+            w.push_back(s23);
+            szamok.push_back("5");
+            w.push_back(s24);
+            szamok.push_back("1");
+            w.push_back(s25);
+            szamok.push_back("0");
+            w.push_back(s26);
+            szamok.push_back("2");
+            w.push_back(s27);
+            szamok.push_back("0");
+            w.push_back(s28);
+            szamok.push_back("0");
+            w.push_back(s29);
+            szamok.push_back("0");
+            w.push_back(s30);
+            szamok.push_back("0");
+            w.push_back(s31);
+            szamok.push_back("4");
+            w.push_back(s32);
+            szamok.push_back("1");
+            w.push_back(s33);
+            szamok.push_back("0");
+            w.push_back(s34);
+            szamok.push_back("0");
+            w.push_back(s35);
+            szamok.push_back("0");
+            w.push_back(s36);
+            szamok.push_back("3");
+            w.push_back(s37);
+            szamok.push_back("4");
+            w.push_back(s38);
+            szamok.push_back("0");
+            w.push_back(s39);
+            szamok.push_back("0");
+            w.push_back(s40);
+            szamok.push_back("5");
+            w.push_back(s41);
+            szamok.push_back("0");
+            w.push_back(s42);
+            szamok.push_back("6");
+            w.push_back(s43);
+            szamok.push_back("0");
+            w.push_back(s44);
+            szamok.push_back("9");
+            w.push_back(s45);
+            szamok.push_back("0");
+            w.push_back(s46);
+            szamok.push_back("1");
+            w.push_back(s47);
+            szamok.push_back("2");
+            w.push_back(s48);
+            szamok.push_back("0");
+            w.push_back(s49);
+            szamok.push_back("0");
+            w.push_back(s50);
+            szamok.push_back("8");
+            w.push_back(s51);
+            szamok.push_back("0");
+            w.push_back(s52);
+            szamok.push_back("6");
+            w.push_back(s53);
+            szamok.push_back("0");
+            w.push_back(s54);
+            szamok.push_back("4");
+            w.push_back(s55);
+            szamok.push_back("0");
+            w.push_back(s56);
+            szamok.push_back("4");
+            w.push_back(s57);
+            szamok.push_back("0");
+            w.push_back(s58);
+            szamok.push_back("0");
+            w.push_back(s59);
+            szamok.push_back("0");
+            w.push_back(s60);
+            szamok.push_back("8");
+            w.push_back(s61);
+            szamok.push_back("5");
+            w.push_back(s62);
+            szamok.push_back("1");
+            w.push_back(s63);
+            szamok.push_back("6");
+            w.push_back(s64);
+            szamok.push_back("0");
+            w.push_back(s65);
+            szamok.push_back("1");
+            w.push_back(s66);
+            szamok.push_back("3");
+            w.push_back(s67);
+            szamok.push_back("0");
+            w.push_back(s68);
+            szamok.push_back("6");
+            w.push_back(s69);
+            szamok.push_back("0");
+            w.push_back(s70);
+            szamok.push_back("0");
+            w.push_back(s71);
+            szamok.push_back("0");
+            w.push_back(s72);
+            szamok.push_back("9");
+            w.push_back(s73);
+            szamok.push_back("0");
+            w.push_back(s74);
+            szamok.push_back("0");
+            w.push_back(s75);
+            szamok.push_back("6");
+            w.push_back(s76);
+            szamok.push_back("0");
+            w.push_back(s77);
+            szamok.push_back("0");
+            w.push_back(s78);
+            szamok.push_back("9");
+            w.push_back(s79);
+            szamok.push_back("7");
+            w.push_back(s80);
+            szamok.push_back("0");
+            w.push_back(s81);
+            szamok.push_back("0");
+        }
     }
 
 };
@@ -684,6 +1182,7 @@ void Set_button::action() {
         _myparent->s81->setText(_myparent->b1->erteke());
         _myparent->szamok[80]=_myparent->b1->erteke();
     }
+
     for(int i=0; i<_myparent->szamok.size();i++){
         int index=1;
         ///Sorba Előre///
@@ -759,6 +1258,7 @@ void Set_button::action() {
                 }
             }
         }
+
         ///Sorba Hátra///
         if(index==1){
             if(i>0){
@@ -832,6 +1332,7 @@ void Set_button::action() {
                 }
             }
         }
+
         ///Lefele Előre///
         if(index==1){
             if(i<72){
@@ -889,6 +1390,7 @@ void Set_button::action() {
                 }
             }
         }
+
         ///Lefele Hátra///
         if(index==1){
             if(i>8){
@@ -1012,257 +1514,295 @@ void Set_button::action() {
             }
         }
 
+        ///Győzelem///
+        if(_myparent->palya==0){
+            vector<string>megoldas1={"3","9","6","4","2","5","1","8","7","8","2","5","7","9","1","4","6","3","4","1","7","8","3","6","2","9","5","1","6","3","2","4","9","7","5","8","2","7","8","1","5","3","6","4","9","9","5","4","6","8","7","3","1","2","5","4","9","3","1","2","8","7","6","7","8","2","9","6","4","5","3","1","6","3","1","5","7","8","9","2","4"};
+            int osszeg1=0;
+            for(int i=0; i<_myparent->szamok.size();i++){
+                if(_myparent->szamok[i] == megoldas1[i]){
+                    osszeg1++;
+                    if(osszeg1==81){
+                        index=2;
+                    }
+                }
+            }
+        }
+
+        if(_myparent->palya==1){
+            vector<string>megoldas2={"6","9","5","8","1","7","4","3","2","4","7","1","6","3","2","9","5","8","3","8","2","4","9","5","1","7","6","5","1","6","3","2","4","8","9","7","8","2","3","9","7","6","5","4","1","7","4","9","5","8","1","6","2","3","2","6","7","1","4","9","3","8","5","1","3","4","2","5","8","7","6","9","9","5","8","7","6","3","2","1","4"};
+            int osszeg2=0;
+            for(int i=0; i<_myparent->szamok.size();i++){
+                if(_myparent->szamok[i] == megoldas2[i]){
+                    osszeg2++;
+                    if(osszeg2==81){
+                        index=2;
+                    }
+                }
+            }
+        }
+
+        if(_myparent->palya==2){
+            vector<string>megoldas3={"7","9","2","8","3","4","1","6","5","5","6","1","2","9","7","3","4","8","3","8","4","6","5","1","9","2","7","6","7","9","4","1","2","8","5","3","4","3","8","5","7","6","2","9","1","1","2","5","9","8","3","6","7","4","9","4","7","3","2","8","5","1","6","2","1","3","7","6","5","4","8","9","8","5","6","1","4","9","7","3","2"};
+            int osszeg3 = 0;
+            for(int i=0; i<_myparent->szamok.size();i++){
+                if(_myparent->szamok[i] == megoldas3[i]){
+                    osszeg3++;
+                    if(osszeg3==81){
+                        index=2;
+                    }
+                }
+            }
+        }
 
         if(i==0){
-            _myparent->s1->setRossz(index);
+            _myparent->s1->setIndex(index);
         }
         if(i==1){
-            _myparent->s2->setRossz(index);
+            _myparent->s2->setIndex(index);
         }
         if(i==2){
-            _myparent->s3->setRossz(index);
+            _myparent->s3->setIndex(index);
         }
         if(i==3){
-            _myparent->s4->setRossz(index);
+            _myparent->s4->setIndex(index);
         }
         if(i==4){
-            _myparent->s5->setRossz(index);
+            _myparent->s5->setIndex(index);
         }
         if(i==5){
-            _myparent->s6->setRossz(index);
+            _myparent->s6->setIndex(index);
         }
         if(i==6){
-            _myparent->s7->setRossz(index);
+            _myparent->s7->setIndex(index);
         }
         if(i==7){
-            _myparent->s8->setRossz(index);
+            _myparent->s8->setIndex(index);
         }
         if(i==8){
-            _myparent->s9->setRossz(index);
+            _myparent->s9->setIndex(index);
         }
         if(i==9){
-            _myparent->s10->setRossz(index);
+            _myparent->s10->setIndex(index);
         }
         if(i==10){
-            _myparent->s11->setRossz(index);
+            _myparent->s11->setIndex(index);
         }
         if(i==11){
-            _myparent->s12->setRossz(index);
+            _myparent->s12->setIndex(index);
         }
         if(i==12){
-            _myparent->s13->setRossz(index);
+            _myparent->s13->setIndex(index);
         }
         if(i==13){
-            _myparent->s14->setRossz(index);
+            _myparent->s14->setIndex(index);
         }
         if(i==14){
-            _myparent->s15->setRossz(index);
+            _myparent->s15->setIndex(index);
         }
         if(i==15){
-            _myparent->s16->setRossz(index);
+            _myparent->s16->setIndex(index);
         }
         if(i==16){
-            _myparent->s17->setRossz(index);
+            _myparent->s17->setIndex(index);
         }
         if(i==17){
-            _myparent->s18->setRossz(index);
+            _myparent->s18->setIndex(index);
         }
         if(i==18){
-            _myparent->s19->setRossz(index);
+            _myparent->s19->setIndex(index);
         }
         if(i==19){
-            _myparent->s20->setRossz(index);
+            _myparent->s20->setIndex(index);
         }
         if(i==20){
-            _myparent->s21->setRossz(index);
+            _myparent->s21->setIndex(index);
         }
         if(i==21){
-            _myparent->s22->setRossz(index);
+            _myparent->s22->setIndex(index);
         }
         if(i==22){
-            _myparent->s23->setRossz(index);
+            _myparent->s23->setIndex(index);
         }
         if(i==23){
-            _myparent->s24->setRossz(index);
+            _myparent->s24->setIndex(index);
         }
         if(i==24){
-            _myparent->s25->setRossz(index);
+            _myparent->s25->setIndex(index);
         }
         if(i==25){
-            _myparent->s26->setRossz(index);
+            _myparent->s26->setIndex(index);
         }
         if(i==26){
-            _myparent->s27->setRossz(index);
+            _myparent->s27->setIndex(index);
         }
         if(i==27){
-            _myparent->s28->setRossz(index);
+            _myparent->s28->setIndex(index);
         }
         if(i==28){
-            _myparent->s29->setRossz(index);
+            _myparent->s29->setIndex(index);
         }
         if(i==29){
-            _myparent->s30->setRossz(index);
+            _myparent->s30->setIndex(index);
         }
         if(i==30){
-            _myparent->s31->setRossz(index);
+            _myparent->s31->setIndex(index);
         }
         if(i==31){
-            _myparent->s32->setRossz(index);
+            _myparent->s32->setIndex(index);
         }
         if(i==32){
-            _myparent->s33->setRossz(index);
+            _myparent->s33->setIndex(index);
         }
         if(i==33){
-            _myparent->s34->setRossz(index);
+            _myparent->s34->setIndex(index);
         }
         if(i==34){
-            _myparent->s35->setRossz(index);
+            _myparent->s35->setIndex(index);
         }
         if(i==35){
-            _myparent->s36->setRossz(index);
+            _myparent->s36->setIndex(index);
         }
         if(i==36){
-            _myparent->s37->setRossz(index);
+            _myparent->s37->setIndex(index);
         }
         if(i==37){
-            _myparent->s38->setRossz(index);
+            _myparent->s38->setIndex(index);
         }
         if(i==38){
-            _myparent->s39->setRossz(index);
+            _myparent->s39->setIndex(index);
         }
         if(i==39){
-            _myparent->s40->setRossz(index);
+            _myparent->s40->setIndex(index);
         }
         if(i==40){
-            _myparent->s41->setRossz(index);
+            _myparent->s41->setIndex(index);
         }
         if(i==41){
-            _myparent->s42->setRossz(index);
+            _myparent->s42->setIndex(index);
         }
         if(i==42){
-            _myparent->s43->setRossz(index);
+            _myparent->s43->setIndex(index);
         }
         if(i==43){
-            _myparent->s44->setRossz(index);
+            _myparent->s44->setIndex(index);
         }
         if(i==44){
-            _myparent->s45->setRossz(index);
+            _myparent->s45->setIndex(index);
         }
         if(i==45){
-            _myparent->s46->setRossz(index);
+            _myparent->s46->setIndex(index);
         }
         if(i==46){
-            _myparent->s47->setRossz(index);
+            _myparent->s47->setIndex(index);
         }
         if(i==47){
-            _myparent->s48->setRossz(index);
+            _myparent->s48->setIndex(index);
         }
         if(i==48){
-            _myparent->s49->setRossz(index);
+            _myparent->s49->setIndex(index);
         }
         if(i==49){
-            _myparent->s50->setRossz(index);
+            _myparent->s50->setIndex(index);
         }
         if(i==50){
-            _myparent->s51->setRossz(index);
+            _myparent->s51->setIndex(index);
         }
         if(i==51){
-            _myparent->s52->setRossz(index);
+            _myparent->s52->setIndex(index);
         }
         if(i==52){
-            _myparent->s53->setRossz(index);
+            _myparent->s53->setIndex(index);
         }
         if(i==53){
-            _myparent->s54->setRossz(index);
+            _myparent->s54->setIndex(index);
         }
         if(i==54){
-            _myparent->s55->setRossz(index);
+            _myparent->s55->setIndex(index);
         }
         if(i==55){
-            _myparent->s56->setRossz(index);
+            _myparent->s56->setIndex(index);
         }
         if(i==56){
-            _myparent->s57->setRossz(index);
+            _myparent->s57->setIndex(index);
         }
         if(i==57){
-            _myparent->s58->setRossz(index);
+            _myparent->s58->setIndex(index);
         }
         if(i==58){
-            _myparent->s59->setRossz(index);
+            _myparent->s59->setIndex(index);
         }
         if(i==59){
-            _myparent->s60->setRossz(index);
+            _myparent->s60->setIndex(index);
         }
         if(i==60){
-            _myparent->s61->setRossz(index);
+            _myparent->s61->setIndex(index);
         }
         if(i==61){
-            _myparent->s62->setRossz(index);
+            _myparent->s62->setIndex(index);
         }
         if(i==62){
-            _myparent->s63->setRossz(index);
+            _myparent->s63->setIndex(index);
         }
         if(i==63){
-            _myparent->s64->setRossz(index);
+            _myparent->s64->setIndex(index);
         }
         if(i==64){
-            _myparent->s65->setRossz(index);
+            _myparent->s65->setIndex(index);
         }
         if(i==65){
-            _myparent->s66->setRossz(index);
+            _myparent->s66->setIndex(index);
         }
         if(i==66){
-            _myparent->s67->setRossz(index);
+            _myparent->s67->setIndex(index);
         }
         if(i==67){
-            _myparent->s68->setRossz(index);
+            _myparent->s68->setIndex(index);
         }
         if(i==68){
-            _myparent->s69->setRossz(index);
+            _myparent->s69->setIndex(index);
         }
         if(i==69){
-            _myparent->s70->setRossz(index);
+            _myparent->s70->setIndex(index);
         }
         if(i==70){
-            _myparent->s71->setRossz(index);
+            _myparent->s71->setIndex(index);
         }
         if(i==71){
-            _myparent->s72->setRossz(index);
+            _myparent->s72->setIndex(index);
         }
         if(i==72){
-            _myparent->s73->setRossz(index);
+            _myparent->s73->setIndex(index);
         }
         if(i==73){
-            _myparent->s74->setRossz(index);
+            _myparent->s74->setIndex(index);
         }
         if(i==74){
-            _myparent->s75->setRossz(index);
+            _myparent->s75->setIndex(index);
         }
         if(i==75){
-            _myparent->s76->setRossz(index);
+            _myparent->s76->setIndex(index);
         }
         if(i==76){
-            _myparent->s77->setRossz(index);
+            _myparent->s77->setIndex(index);
         }
         if(i==77){
-            _myparent->s78->setRossz(index);
+            _myparent->s78->setIndex(index);
         }
         if(i==78){
-            _myparent->s79->setRossz(index);
+            _myparent->s79->setIndex(index);
         }
         if(i==79){
-            _myparent->s80->setRossz(index);
+            _myparent->s80->setIndex(index);
         }
         if(i==80){
-            _myparent->s81->setRossz(index);
+            _myparent->s81->setIndex(index);
         }
     }
 }
 
-
 int main()
 {
-    My_Window * mywindow = new My_Window(800,600);
+    My_Window * mywindow = new My_Window(1500,600);
     mywindow->event_loop();
     return 0;
 }
